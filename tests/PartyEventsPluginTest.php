@@ -1,6 +1,6 @@
 <?php
 
-require_once "../event-mgmt-plugin.php";
+require_once('../event-mgmt-plugin.php');
 
 class PartyEventsPluginTest extends WP_UnitTestCase {
 
