@@ -48,4 +48,4 @@ jobs:
       - name: Install WordPress test library
         run: bash bin/install-wp-tests.sh wordpress_test incognito Gox56s0 127.0.0.1:3306 latest
       - name: Run tests
-        run: vendor/bin/phpunit
+        run: vendor/bin/phpunit tests
