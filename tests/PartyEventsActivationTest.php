@@ -27,7 +27,7 @@ class PartyEventsActivationTest extends \WP_UnitTestCase {
         // Check if the table now exists
         $this->assertTrue($wpdb->get_var("SHOW TABLES LIKE '$table_name'") === $table_name);
 
-        // Check if the table has the correct columns
+        // Check if the table has the correct number columns
         $columns = $wpdb->get_results("DESCRIBE $table_name");
         $this->assertCount(6, $columns);  // id, title, date, venue, organizer, description
     }
