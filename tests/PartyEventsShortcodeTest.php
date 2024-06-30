@@ -1,5 +1,7 @@
 <?php
 
+require_once "../event-mgmt-plugin.php";
+
 class PartyEventsShortcodeTest extends WP_UnitTestCase {
 
     public function setUp(): void {
@@ -18,7 +20,7 @@ class PartyEventsShortcodeTest extends WP_UnitTestCase {
     }
 
     public function test_display_events_shortcode() {
-        $output = do_shortcode('[display_events]');
+        $output = do_shortcode('[events]');
         $this->assertStringContainsString('Sample Event', $output);
         $this->assertStringContainsString('2023-12-31', $output);
         $this->assertStringContainsString('Sample Venue', $output);

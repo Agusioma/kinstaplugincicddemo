@@ -1,5 +1,7 @@
 <?php
 
+require_once "../event-mgmt-plugin.php";
+
 class PartyEventsPluginTest extends WP_UnitTestCase {
 
     public function test_form_submission() {
@@ -12,7 +14,7 @@ class PartyEventsPluginTest extends WP_UnitTestCase {
         $_POST['pep_event_description'] = 'This is a test event description.';
 
         // Call the form processing function
-        pep_process_form();
+        process_event_submission();
 
         // Check if the event was inserted into the database
         global $wpdb;

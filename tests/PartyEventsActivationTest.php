@@ -1,5 +1,6 @@
 <?php
 
+require_once "../event-mgmt-plugin.php";
 
 class PartyEventsActivationTest extends WP_UnitTestCase {
 
@@ -11,7 +12,7 @@ class PartyEventsActivationTest extends WP_UnitTestCase {
         $this->assertFalse($wpdb->get_var("SHOW TABLES LIKE '$table_name'") === $table_name);
 
         // Simulate plugin activation
-        pep_create_table();
+        create_table();
 
         // Check if the table now exists
         $this->assertTrue($wpdb->get_var("SHOW TABLES LIKE '$table_name'") === $table_name);
