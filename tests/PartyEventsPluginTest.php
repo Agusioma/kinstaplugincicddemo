@@ -15,12 +15,12 @@ class PartyEventsPluginTest extends WP_UnitTestCase {
 
     public function test_form_submission() {
         // Simulate form submission
-        $_POST['pep_submit'] = 'Submit';
-        $_POST['pep_event_title'] = 'Test Event';
-        $_POST['pep_event_date'] = '2023-12-31';
-        $_POST['pep_event_venue'] = 'Test Venue';
-        $_POST['pep_event_organizer'] = 'Test Organizer';
-        $_POST['pep_event_description'] = 'This is a test event description.';
+        $_POST['submit_btn'] = 'Submit';
+        $_POST['event_title'] = 'Test Event';
+        $_POST['event_date'] = '2023-12-31';
+        $_POST['event_venue'] = 'Test Venue';
+        $_POST['event_organizer'] = 'Test Organizer';
+        $_POST['event_description'] = 'This is a test event description.';
 
         // Call the form processing function
         self::$class_instance->process_event_submission();
@@ -30,6 +30,7 @@ class PartyEventsPluginTest extends WP_UnitTestCase {
         $table_name = $wpdb->prefix . 'party_events';
         $event = $wpdb->get_row("SELECT * FROM $table_name WHERE title = 'Test Event'");
 
+        $this->assertNotNull($event);
         $this->assertEquals('Test Event', $event->title);
         $this->assertEquals('2023-12-31', $event->date);
         $this->assertEquals('Test Venue', $event->venue);
