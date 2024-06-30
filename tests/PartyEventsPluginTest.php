@@ -1,8 +1,17 @@
 <?php
 
-/*require_once('../kinstaplugincicddemo/event-mgmt-plugin.php');
+require_once('../kinstaplugincicddemo/event-mgmt-plugin.php');
 
 class PartyEventsPluginTest extends WP_UnitTestCase {
+
+    public function setUp(): void
+    {
+        parent::setUpBeforeClass();
+        //parent::setUp();
+        // parent::set_up_before_class();
+        self::$class_instance = new Party_Events_Plugin();
+
+    }
 
     public function test_form_submission() {
         // Simulate form submission
@@ -14,7 +23,7 @@ class PartyEventsPluginTest extends WP_UnitTestCase {
         $_POST['pep_event_description'] = 'This is a test event description.';
 
         // Call the form processing function
-        process_event_submission();
+        self::$class_instance->process_event_submission();
 
         // Check if the event was inserted into the database
         global $wpdb;
@@ -30,4 +39,4 @@ class PartyEventsPluginTest extends WP_UnitTestCase {
     }
 }
 
-?>*/
+?>

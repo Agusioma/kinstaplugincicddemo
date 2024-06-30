@@ -1,13 +1,17 @@
 <?php
-/*
-require_once('../kinstaplugincicddemo/event-mgmt-plugin.php');
 
+require_once('../kinstaplugincicddemo/event-mgmt-plugin.php');
 
 class PartyEventsShortcodeTest extends WP_UnitTestCase {
 
-    public function setUp(): void {
-        parent::setUp();
-        
+    public function setUp(): void
+    {
+        parent::setUpBeforeClass();
+        self::$class_instance = new Party_Events_Plugin();
+    }
+
+    public function test_display_events_shortcode() {
+
         // Insert a test event into the database
         global $wpdb;
         $table_name = $wpdb->prefix . 'party_events';
@@ -18,9 +22,7 @@ class PartyEventsShortcodeTest extends WP_UnitTestCase {
             'organizer' => 'Sample Organizer',
             'description' => 'Sample description.',
         ]);
-    }
 
-    public function test_display_events_shortcode() {
         $output = do_shortcode('[events]');
         $this->assertStringContainsString('Sample Event', $output);
         $this->assertStringContainsString('2023-12-31', $output);
@@ -31,4 +33,3 @@ class PartyEventsShortcodeTest extends WP_UnitTestCase {
 }
 
 ?>
-*/
