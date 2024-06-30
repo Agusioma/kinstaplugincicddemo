@@ -1,5 +1,5 @@
 {
-  "name": "party-event-plugin",
+  "name": "kinsta/party-event-plugin",
   "description": "A WordPress plugin for managing and organizing party and event details seamlessly",
   "require": {},
   "require-dev": {
