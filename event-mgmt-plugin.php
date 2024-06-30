@@ -121,7 +121,10 @@ class Party_Events_Plugin {
         return $output;
     }
 }
+//@php ./vendor/squizlabs/php_codesniffer/bin/phpcs --runtime-set testVersion 7.4-"
 
 // Instantiate the plugin class
 new Party_Events_Plugin();
 ?>
+
+
