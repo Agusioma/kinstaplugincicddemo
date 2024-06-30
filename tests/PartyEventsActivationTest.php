@@ -1,14 +1,17 @@
 <?php
 
 require_once('../kinstaplugincicddemo/event-mgmt-plugin.php');
+require_once ('../kinstaplugincicddemo//vendor/autoload.php');
+
+//require_once __DIR__ . '/restaurant-connect.php';
 //require_once('../event-mgmt-plugin.php');
 class PartyEventsActivationTest extends \WP_UnitTestCase {
     private static $class_instance;
     public function setUp()
     {
         //parent::setUp();
-        parent::set_up_before_class();
-        self::$class_instance = new Party_Events_Plugin();
+       // parent::set_up_before_class();
+        //self::$class_instance = new Party_Events_Plugin();
 
     }
 
