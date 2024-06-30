@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 
 if [[ $# -lt 1 ]]; then
-	echo "usage: $0 <dbname> [dbuser] [dbpass] [dbhost] [wp_version]"
+	echo "usage: $0 $1 $2 $3 $4 $5"
 	exit 1
 fi
 
 DB_NAME=$1
-DB_USER=${2-root}
-DB_PASS=${3-}
-DB_HOST=${4-localhost}
-WP_VERSION=${5-latest}
+DB_USER=$2
+DB_PASS=$3
+DB_HOST=$4
+WP_VERSION=$5
 
 WP_TESTS_DIR=/tmp/wordpress-tests-lib
 WP_CORE_DIR=/tmp/wordpress/
