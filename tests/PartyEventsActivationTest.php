@@ -2,7 +2,7 @@
 
 require_once('../kinstaplugincicddemo/event-mgmt-plugin.php');
 //require_once('../event-mgmt-plugin.php');
-class PartyEventsActivationTest extends WP_UnitTestCase {
+class PartyEventsActivationTest extends \WP_UnitTestCase {
     private static $class_instance;
     public function setUp()
     {
