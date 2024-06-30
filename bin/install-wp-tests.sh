@@ -35,7 +35,7 @@ download() {
   set -ex
 
 # set up WordPress
-install_wp() {
+setup_wp() {
 
 	if [ -d $WP_CORE_DIR ]; then
 		return;
@@ -49,7 +49,7 @@ install_wp() {
 	download https://raw.githubusercontent.com/markoheijnen/wp-mysqli/master/db.php $WP_CORE_DIR/wp-content/db.php
 }
 
-install_test_suite() {
+setup_test_suite() {
 	local ioption='-i'
 
 	# set up testing suite if it doesn't yet exist
@@ -85,7 +85,7 @@ create_db() {
 	mysqladmin create $DB_NAME --user="$DB_USER" --password="$DB_PASS"$EXTRA
 }
 
-install_db() {
+setup_db() {
 
 	# parse DB_HOST for port or socket references
 	local PARTS=(${DB_HOST//\:/ })
@@ -107,13 +107,12 @@ install_db() {
 	if [ $(mysql --user="$DB_USER" --password="$DB_PASS"$EXTRA --execute='show databases;' | grep ^$DB_NAME$) ]
 	then
 		echo "Reinstalling will delete the existing test database ($DB_NAME)"
-		#read -p 'Are you sure you want to proceed? [y/N]: ' DELETE_EXISTING_DB
 		recreate_db
 	else
 		create_db
 	fi
 }
 
-install_wp
-install_test_suite
-install_db
+setup_wp
+setup_test_suite
+setup_db
