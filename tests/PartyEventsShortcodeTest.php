@@ -1,7 +1,7 @@
 <?php
 
 require_once('../kinstaplugincicddemo/event-mgmt-plugin.php');
-/home/runner/work/kinstaplugincicddemo/kinstaplugincicddemo/tests/PartyEventsActivationTest.php
+
 
 class PartyEventsShortcodeTest extends WP_UnitTestCase {
 

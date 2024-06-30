@@ -1,8 +1,15 @@
 <?php
 
-require_once('../kinstaplugincicddemo/event-mgmt-plugin.php');
+//require_once('../kinstaplugincicddemo/event-mgmt-plugin.php');
 
 class PartyEventsActivationTest extends WP_UnitTestCase {
+
+    public function setUp()
+    {
+        parent::setUp();
+
+        $this->class_instance = new event();
+    }
 
     public function test_create_table() {
         global $wpdb;
