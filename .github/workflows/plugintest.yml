@@ -31,7 +31,7 @@ jobs:
         env:
           MYSQL_ALLOW_EMPTY_PASSWORD: false
           MYSQL_USER: incognito
-          MYSQL_PASSWORD: "0000ss"
+          MYSQL_PASSWORD: Gox56s0|k8~A
           MYSQL_DATABASE: wordpress_test
         ports:
           - 3306:3306
@@ -46,6 +46,6 @@ jobs:
       - name: Install dependencies
         run: composer install --no-progress --no-suggest --prefer-dist
       - name: Install WordPress test library
-        run: bash bin/install-wp-tests.sh wordpress_test incognito Gox56$0|k8~A 127.0.0.1:3306 latest
+        run: bash bin/install-wp-tests.sh wordpress_test incognito Gox56s0|k8~A 127.0.0.1:3306 latest
       - name: Run tests
         run: vendor/bin/phpunit
