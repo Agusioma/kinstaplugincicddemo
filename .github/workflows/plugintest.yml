@@ -31,7 +31,7 @@ jobs:
         env:
           MYSQL_ALLOW_EMPTY_PASSWORD: false
           MYSQL_USER: incognito
-          MYSQL_PASSWORD: "Gox56s0|k8~A"
+          MYSQL_PASSWORD: "0000ss"
           MYSQL_DATABASE: wordpress_test
         ports:
           - 3306:3306
