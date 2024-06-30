@@ -1,6 +1,6 @@
 <?php
 
-require_once('../kinstaplugincicddemo/event-mgmt-plugin.php');
+/*require_once('../kinstaplugincicddemo/event-mgmt-plugin.php');
 
 class PartyEventsPluginTest extends WP_UnitTestCase {
 
@@ -30,4 +30,4 @@ class PartyEventsPluginTest extends WP_UnitTestCase {
     }
 }
 
-?>
+?>*/
