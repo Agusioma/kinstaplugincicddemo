@@ -2,11 +2,11 @@
 
 require_once '../kinstaplugincicddemo/event-mgmt-plugin.php';
 
-class PartyEventsActivationTest extends \WP_UnitTestCase {
-	private static $class_instance;
+class PartyEventsActivationTest extends WP_UnitTestCase {
+	private static $plugin_instance;
 	public function setUp(): void {
 		parent::setUpBeforeClass();
-		self::$class_instance = new Party_Events_Plugin();
+		self::$plugin_instance = new Party_Events_Plugin();
 	}
 
 	public function test_create_table() {
@@ -17,7 +17,7 @@ class PartyEventsActivationTest extends \WP_UnitTestCase {
 		$this->assertFalse( $wpdb->get_var( "SHOW TABLES LIKE '$table_name'" ) === $table_name );
 
 		// Simulate plugin activation
-		self::$class_instance->create_table();
+		self::$plugin_instance->create_table();
 
 		// Check if the table now exists
 		$this->assertTrue( $wpdb->get_var( "SHOW TABLES LIKE '$table_name'" ) === $table_name );

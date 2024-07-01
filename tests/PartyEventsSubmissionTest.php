@@ -2,11 +2,12 @@
 
 require_once '../kinstaplugincicddemo/event-mgmt-plugin.php';
 
-class PartyEventsPluginTest extends WP_UnitTestCase {
-	private static $class_instance;
+class PartyEventsSubmissionTest extends WP_UnitTestCase {
+	private static $plugin_instance;
 	public function setUp(): void {
+
 		parent::setUpBeforeClass();
-		self::$class_instance = new Party_Events_Plugin();
+		self::$plugin_instance = new Party_Events_Plugin();
 	}
 
 	public function test_form_submission() {
@@ -19,7 +20,7 @@ class PartyEventsPluginTest extends WP_UnitTestCase {
 		$_POST['event_description'] = 'This is a test event description.';
 
 		// Call the form processing function
-		self::$class_instance->process_event_submission();
+		self::$plugin_instance->process_event_submission();
 
 		// Check if the event was inserted into the database
 		global $wpdb;
