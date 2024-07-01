@@ -20,7 +20,7 @@ jobs:
       - name: Install dependencies
         run: composer install --no-progress --no-suggest --prefer-dist
       - name: Run PHPCS
-        run: vendor/bin/phpcs --standard=WordPress tests event-mgmt-plugin.php
+        run: vendor/bin/phpcs --standard=WordPress tests event-mgmt-plugin.php --report-full --report-checkstyle=./phpcs-report.xml
      # - name: Run PHPCBF to fix the linting errors
       #  run: vendor/bin/phpcbf --standard=WordPress tests event-mgmt-plugin.php
 
