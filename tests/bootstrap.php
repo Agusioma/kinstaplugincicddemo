@@ -10,7 +10,8 @@ if ( false !== $_phpunit_polyfills_path ) {
 	define( 'WP_TESTS_PHPUNIT_POLYFILLS_PATH', $_phpunit_polyfills_path );
 }
 
-/*if ( ! file_exists( "{$_tests_dir}/includes/functions.php" ) ) {
+/*
+if ( ! file_exists( "{$_tests_dir}/includes/functions.php" ) ) {
 	echo "Could not find {$_tests_dir}/includes/functions.php, have you run bin/configure-necessary-test-files.sh ?" . PHP_EOL;
 	exit( 1 );
 }*/
